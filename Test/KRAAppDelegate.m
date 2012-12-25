@@ -19,8 +19,7 @@
     self.viewController = [[KRAViewController alloc] initWithNibName:@"KRAViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    
-    [self createAssets];
+
     return YES;
 }
 
@@ -49,53 +48,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-- (void) createAssets {
-    // the drawing rectangle
-    CGSize theSize = CGSizeMake(20, 20);
-    CGRect theRect;
-    theRect.origin = CGPointZero;
-    theRect.size = theSize;
-    
-    // all
-    [self createAssetWithRect: theRect
-                   andCorners: UIRectCornerAllCorners
-                       toFile: @"AllCorners.png"];
-    
-    // top
-    [self createAssetWithRect: theRect
-                   andCorners: UIRectCornerTopLeft | UIRectCornerTopRight
-                       toFile: @"TopCorners.png"];
-    
-    // bottom
-    [self createAssetWithRect: theRect
-                   andCorners: UIRectCornerBottomLeft | UIRectCornerBottomRight
-                       toFile: @"BottomCorners.png"];
-}
-
-- (void) createAssetWithRect: (CGRect) rect andCorners: (UIRectCorner) corner toFile: (NSString *) file {
-    // First, all corners
-    UIGraphicsBeginImageContext(rect.size);
-    
-    // set the stroke color
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetStrokeColorWithColor(context, [UIColor darkGrayColor].CGColor);
-    
-    // create the path and stroke it
-    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect: rect
-                                               byRoundingCorners: corner
-                                                     cornerRadii: CGSizeMake(5.0f, 5.0f)];
-    [path stroke];
-    
-    // extract image from context
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-
-    // write it
-    NSString  *pngPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-    pngPath = [pngPath stringByAppendingPathComponent: file];
-    [UIImagePNGRepresentation(image) writeToFile: pngPath atomically: YES];
 }
 
 @end
