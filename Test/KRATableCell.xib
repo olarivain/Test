@@ -43,40 +43,8 @@
 							<object class="IBUIView" id="620600988">
 								<reference key="NSNextResponder" ref="269768540"/>
 								<int key="NSvFlags">274</int>
-								<array class="NSMutableArray" key="NSSubviews">
-									<object class="IBUILabel" id="955012381">
-										<reference key="NSNextResponder" ref="620600988"/>
-										<int key="NSvFlags">292</int>
-										<string key="NSFrame">{{20, 20}, {260, 21}}</string>
-										<reference key="NSSuperview" ref="620600988"/>
-										<reference key="NSWindow"/>
-										<string key="NSReuseIdentifierKey">_NS:9</string>
-										<bool key="IBUIOpaque">NO</bool>
-										<bool key="IBUIClipsSubviews">YES</bool>
-										<int key="IBUIContentMode">7</int>
-										<bool key="IBUIUserInteractionEnabled">NO</bool>
-										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-										<string key="IBUIText">Label</string>
-										<object class="NSColor" key="IBUITextColor">
-											<int key="NSColorSpace">1</int>
-											<bytes key="NSRGB">MCAwIDAAA</bytes>
-											<string key="IBUIColorCocoaTouchKeyPath">darkTextColor</string>
-										</object>
-										<nil key="IBUIHighlightedColor"/>
-										<int key="IBUIBaselineAdjustment">0</int>
-										<object class="IBUIFontDescription" key="IBUIFontDescription">
-											<int key="type">1</int>
-											<double key="pointSize">17</double>
-										</object>
-										<object class="NSFont" key="IBUIFont">
-											<string key="NSName">Helvetica</string>
-											<double key="NSSize">17</double>
-											<int key="NSfFlags">16</int>
-										</object>
-										<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
-									</object>
-								</array>
-								<string key="NSFrameSize">{320, 79}</string>
+								<array class="NSMutableArray" key="NSSubviews"/>
+								<string key="NSFrame">{{10, 0}, {300, 80}}</string>
 								<reference key="NSSuperview" ref="269768540"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="955012381"/>
@@ -86,6 +54,37 @@
 									<bytes key="NSRGB">MC44NTE0NDI5MjA5IDAuNzQ2MTc0NDAxOSAwLjIzMzYzMzEzNTEAA</bytes>
 								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+							</object>
+							<object class="IBUILabel" id="955012381">
+								<reference key="NSNextResponder" ref="269768540"/>
+								<int key="NSvFlags">300</int>
+								<string key="NSFrame">{{30, 29}, {260, 21}}</string>
+								<reference key="NSSuperview" ref="269768540"/>
+								<reference key="NSWindow"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<int key="IBUIContentMode">7</int>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<string key="IBUIText">Label</string>
+								<object class="NSColor" key="IBUITextColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MCAwIDAAA</bytes>
+									<string key="IBUIColorCocoaTouchKeyPath">darkTextColor</string>
+								</object>
+								<nil key="IBUIHighlightedColor"/>
+								<int key="IBUIBaselineAdjustment">0</int>
+								<object class="IBUIFontDescription" key="IBUIFontDescription">
+									<int key="type">1</int>
+									<double key="pointSize">17</double>
+								</object>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">Helvetica</string>
+									<double key="NSSize">17</double>
+									<int key="NSfFlags">16</int>
+								</object>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
 						<string key="NSFrameSize">{320, 79}</string>
@@ -120,6 +119,14 @@
 			<array class="NSMutableArray" key="connectionRecords">
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">roundedCorners</string>
+						<reference key="source" ref="796403140"/>
+						<reference key="destination" ref="620600988"/>
+					</object>
+					<int key="connectionID">14</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">theLabel</string>
 						<reference key="source" ref="796403140"/>
 						<reference key="destination" ref="955012381"/>
@@ -151,21 +158,20 @@
 						<reference key="object" ref="796403140"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="620600988"/>
+							<reference ref="955012381"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">7</int>
 						<reference key="object" ref="620600988"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="955012381"/>
-						</array>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="796403140"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
 						<reference key="object" ref="955012381"/>
-						<reference key="parent" ref="620600988"/>
+						<reference key="parent" ref="796403140"/>
 					</object>
 				</array>
 			</object>
@@ -177,22 +183,50 @@
 				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="2.CustomClassName">KRATableCell</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="7.CustomClassName">KRARoundedCorners</string>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">13</int>
+			<int key="maxID">14</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">KRACustomDataSource</string>
+					<string key="superclassName">NSObject</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">table</string>
+						<string key="NS.object.0">UITableView</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">table</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">table</string>
+							<string key="candidateClassName">UITableView</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/KRACustomDataSource.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">KRARoundedCorners</string>
+					<string key="superclassName">UIView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/KRARoundedCorners.h</string>
+					</object>
+				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">KRATableCell</string>
 					<string key="superclassName">UITableViewCell</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="mapView">MKMapView</string>
-						<string key="mapViewContainer">UIView</string>
+						<string key="roundedCorners">KRARoundedCorners</string>
 						<string key="theLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -200,9 +234,9 @@
 							<string key="name">mapView</string>
 							<string key="candidateClassName">MKMapView</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="mapViewContainer">
-							<string key="name">mapViewContainer</string>
-							<string key="candidateClassName">UIView</string>
+						<object class="IBToOneOutletInfo" key="roundedCorners">
+							<string key="name">roundedCorners</string>
+							<string key="candidateClassName">KRARoundedCorners</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="theLabel">
 							<string key="name">theLabel</string>
@@ -217,28 +251,23 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">KRAViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">table</string>
-						<string key="NS.object.0">OTTableView</string>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">table</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="table">UITableView</string>
+						<string key="tableDataSource">KRACustomDataSource</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="table">
 							<string key="name">table</string>
-							<string key="candidateClassName">OTTableView</string>
+							<string key="candidateClassName">UITableView</string>
 						</object>
-					</object>
+						<object class="IBToOneOutletInfo" key="tableDataSource">
+							<string key="name">tableDataSource</string>
+							<string key="candidateClassName">KRACustomDataSource</string>
+						</object>
+					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/KRAViewController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">OTTableView</string>
-					<string key="superclassName">UITableView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/OTTableView.h</string>
 					</object>
 				</object>
 			</array>

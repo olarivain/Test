@@ -14,6 +14,7 @@
 			<string>IBMKMapView</string>
 			<string>IBProxyObject</string>
 			<string>IBUITableViewCell</string>
+			<string>IBUIView</string>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -42,25 +43,56 @@
 							<object class="IBMKMapView" id="953307408">
 								<reference key="NSNextResponder" ref="1068784746"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrameSize">{320, 80}</string>
+								<string key="NSFrame">{{10, 0}, {300, 80}}</string>
 								<reference key="NSSuperview" ref="1068784746"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIMultipleTouchEnabled">YES</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+							</object>
+							<object class="IBUIView" id="924555654">
+								<reference key="NSNextResponder" ref="1068784746"/>
+								<int key="NSvFlags">274</int>
+								<string key="NSFrame">{{10, 0}, {300, 80}}</string>
+								<reference key="NSSuperview" ref="1068784746"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="953307408"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<object class="NSColor" key="IBUIBackgroundColor" id="785028312">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MCAwAA</bytes>
+								</object>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<object class="IBUIScreenMetrics" key="IBUISimulatedDestinationMetrics">
+									<string key="IBUISimulatedSizeMetricsClass">IBUIScreenMetrics</string>
+									<object class="NSMutableDictionary" key="IBUINormalizedOrientationToSizeMap">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<array key="dict.sortedKeys">
+											<integer value="1"/>
+											<integer value="3"/>
+										</array>
+										<array key="dict.values">
+											<string>{320, 568}</string>
+											<string>{568, 320}</string>
+										</array>
+									</object>
+									<string key="IBUITargetRuntime">IBCocoaTouchFramework</string>
+									<string key="IBUIDisplayName">Retina 4 Full Screen</string>
+									<int key="IBUIType">2</int>
+								</object>
+								<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
+									<integer value="256" key="IBUIAccessibilityTraits"/>
+								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 						</array>
 						<string key="NSFrameSize">{320, 79}</string>
 						<reference key="NSSuperview" ref="512978095"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="953307408"/>
+						<reference key="NSNextKeyView" ref="924555654"/>
 						<string key="NSReuseIdentifierKey">_NS:11</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MCAwAA</bytes>
-						</object>
+						<reference key="IBUIBackgroundColor" ref="785028312"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -75,6 +107,7 @@
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIClipsSubviews">YES</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+				<int key="IBUISelectionStyle">0</int>
 				<reference key="IBUIContentView" ref="1068784746"/>
 				<string key="IBUIReuseIdentifier">kraCellWithMap</string>
 				<real value="273" key="IBUIRowHeight"/>
@@ -89,6 +122,14 @@
 						<reference key="destination" ref="953307408"/>
 					</object>
 					<int key="connectionID">9</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">roundedCorners</string>
+						<reference key="source" ref="512978095"/>
+						<reference key="destination" ref="924555654"/>
+					</object>
+					<int key="connectionID">13</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -115,6 +156,7 @@
 						<reference key="object" ref="512978095"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="953307408"/>
+							<reference ref="924555654"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -123,12 +165,19 @@
 						<reference key="object" ref="953307408"/>
 						<reference key="parent" ref="512978095"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">12</int>
+						<reference key="object" ref="924555654"/>
+						<reference key="parent" ref="512978095"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="12.CustomClassName">KRARoundedCorners</string>
+				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="2.CustomClassName">KRATableCell</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="3.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -137,16 +186,24 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">11</int>
+			<int key="maxID">13</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">KRARoundedCorners</string>
+					<string key="superclassName">UIView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/KRARoundedCorners.h</string>
+					</object>
+				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">KRATableCell</string>
 					<string key="superclassName">UITableViewCell</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="mapView">MKMapView</string>
-						<string key="mapViewContainer">UIView</string>
+						<string key="roundedCorners">KRARoundedCorners</string>
 						<string key="theLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -154,9 +211,9 @@
 							<string key="name">mapView</string>
 							<string key="candidateClassName">MKMapView</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="mapViewContainer">
-							<string key="name">mapViewContainer</string>
-							<string key="candidateClassName">UIView</string>
+						<object class="IBToOneOutletInfo" key="roundedCorners">
+							<string key="name">roundedCorners</string>
+							<string key="candidateClassName">KRARoundedCorners</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="theLabel">
 							<string key="name">theLabel</string>

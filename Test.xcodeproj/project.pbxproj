@@ -24,6 +24,7 @@
 		0093942516890243008EC5A2 /* KRATableCellWithMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0093942416890243008EC5A2 /* KRATableCellWithMap.xib */; };
 		00939428168902C7008EC5A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00939427168902C7008EC5A2 /* MapKit.framework */; };
 		0093942E16890B9D008EC5A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093942D16890B9D008EC5A2 /* QuartzCore.framework */; };
+		00EE333A168922C000339100 /* KRARoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EE3339168922C000339100 /* KRARoundedCorners.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		0093942416890243008EC5A2 /* KRATableCellWithMap.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KRATableCellWithMap.xib; sourceTree = "<group>"; };
 		00939427168902C7008EC5A2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0093942D16890B9D008EC5A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		00EE3338168922C000339100 /* KRARoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KRARoundedCorners.h; sourceTree = "<group>"; };
+		00EE3339168922C000339100 /* KRARoundedCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KRARoundedCorners.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,17 +129,27 @@
 		002D8D8D1688DBB80096A5C4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				00EE333B16892FB000339100 /* RoundedCorners */,
 				002D8D7D1688DAB20096A5C4 /* KRAViewController.h */,
 				002D8D7E1688DAB20096A5C4 /* KRAViewController.m */,
 				002D8D801688DAB20096A5C4 /* KRAViewController.xib */,
+				0018961A168910920048DEBD /* KRACustomDataSource.h */,
+				0018961B168910920048DEBD /* KRACustomDataSource.m */,
 				002D8D881688DB950096A5C4 /* KRATableCell.h */,
 				002D8D891688DB950096A5C4 /* KRATableCell.m */,
 				002D8D8B1688DBAF0096A5C4 /* KRATableCell.xib */,
 				0093942416890243008EC5A2 /* KRATableCellWithMap.xib */,
-				0018961A168910920048DEBD /* KRACustomDataSource.h */,
-				0018961B168910920048DEBD /* KRACustomDataSource.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		00EE333B16892FB000339100 /* RoundedCorners */ = {
+			isa = PBXGroup;
+			children = (
+				00EE3338168922C000339100 /* KRARoundedCorners.h */,
+				00EE3339168922C000339100 /* KRARoundedCorners.m */,
+			);
+			name = RoundedCorners;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +226,7 @@
 				002D8D7F1688DAB20096A5C4 /* KRAViewController.m in Sources */,
 				002D8D8A1688DB960096A5C4 /* KRATableCell.m in Sources */,
 				0018961C168910920048DEBD /* KRACustomDataSource.m in Sources */,
+				00EE333A168922C000339100 /* KRARoundedCorners.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

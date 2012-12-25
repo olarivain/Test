@@ -34,7 +34,7 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(section == 1) {
-        return 1;
+        return 3;
     }
     return  10;
 }
@@ -45,11 +45,36 @@
     KRATableCell *theCell = [tableView dequeueReusableCellWithIdentifier: cellId];
     [theCell updateWithIndexPath: indexPath];
 
-    if(indexPath.section == 1) {
-        
-        [theCell updateMaskLayerWithWidth: 300 andCorners: UIRectCornerAllCorners];
+    UIRectCorner corners = 0;
+    if(indexPath.row == 0) {
+        corners |= UIRectCornerTopLeft | UIRectCornerTopRight;
     }
+    if(indexPath.row == ([tableView numberOfRowsInSection: indexPath.section] - 1)) {
+        corners |= UIRectCornerBottomLeft | UIRectCornerBottomRight;
+    }
+
+    [theCell updateCorners: corners];
     return theCell;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    // no spacing after last section
+    if(section == [tableView numberOfSections] - 1) {
+        return 0;
+    }
+    
+    // otherwise, fixed size
+    return 40;
+}
+
+- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    // the footer is simply a transparent view
+    // initialize with a 0 size frame and let the table do the sizing
+    UIView *header = [[UIView alloc] initWithFrame: CGRectZero];
+    header.userInteractionEnabled = NO;
+    header.backgroundColor = [UIColor clearColor];
+    
+    return header;
 }
 
 @end

@@ -11,6 +11,6 @@
 @interface KRATableCell : UITableViewCell
 
 - (void) updateWithIndexPath: (NSIndexPath *) indexPath;
-- (void) updateMaskLayerWithWidth: (CGFloat) width andCorners: (UIRectCorner) corners;
+- (void) updateCorners: (UIRectCorner) corners;
 
 @end
